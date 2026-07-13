@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julian Lares-Ibarra</title>
+<meta name="description" content="Julian Lares-Ibarra — AI/ML and AI security. CS grad from Tarleton State University. Multimodal ML research and LLM security work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     HOW TO ADD YOUR PHOTOS
+     ---------------------------------------------------------
+     1. In your GitHub repo, create a folder called  images
+     2. Upload your photos with these exact names:
+          images/me.jpg                 -> your portrait (hero)
+          images/ried-poster.jpg        -> RIED poster session
+          images/capstone-showcase.jpg  -> capstone showcase
+          images/computer-society.jpg   -> Computer Society workshop
+          images/club-event.jpg         -> any club event you like
+     3. That's it. The dashed boxes on the page will be
+        replaced by your photos automatically.
+     (You can also just change the src="" values below to
+      whatever filenames you prefer.)
+     ========================================================= */
+
+  :root{
+    --bg:#FBFBF9;
+    --ink:#1C1D22;
+    --muted:#6B6D76;
+    --accent:#5B45C0;   /* the purple-team purple, used sparingly */
+    --line:#E4E4DE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:17.5px;
+    line-height:1.7;
+  }
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+  h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;letter-spacing:-.01em}
+  h2{font-size:22px;font-weight:700;margin:0 0 20px}
+  section{padding:44px 0}
+  section + section{border-top:1px solid var(--line)}
+
+  .date{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted)}
+
+  /* ------- header ------- */
+  header{padding:64px 0 44px}
+  .head-grid{display:grid;grid-template-columns:1fr 190px;gap:32px;align-items:start}
+  @media(max-width:600px){.head-grid{grid-template-columns:1fr}}
+  h1{font-size:34px;font-weight:700;margin-bottom:14px;line-height:1.15}
+  .intro p{margin-bottom:14px}
+  .intro .hello{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:13px;margin-bottom:10px}
+  .links{margin-top:18px;font-size:16px}
+  .links a{margin-right:16px;white-space:nowrap}
+
+  /* ------- photo frames ------- */
+  .photo{
+    position:relative;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:8px 8px 10px;
+    box-shadow:0 2px 10px rgba(28,29,34,.06);
+  }
+  .photo img{display:block;width:100%;height:auto}
+  .photo img.missing{display:none}
+  .photo .placeholder{
+    display:none;
+    border:2px dashed #C9C9C0;
+    color:var(--muted);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;line-height:1.5;
+    padding:18px 14px;text-align:center;
+    background:var(--bg);
+  }
+  .photo.empty .placeholder{display:block}
+  .photo figcaption{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--muted);
+    padding-top:8px;text-align:center;
+  }
+  .portrait{transform:rotate(1.2deg)}
+  .portrait .placeholder{min-height:220px;display:none;align-items:center;justify-content:center}
+  .portrait.empty .placeholder{display:flex}
+
+  .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  @media(max-width:600px){.photo-row{grid-template-columns:1fr}}
+  .photo-row .photo:nth-child(odd){transform:rotate(-.8deg)}
+  .photo-row .photo:nth-child(even){transform:rotate(.9deg)}
+  .photo-row .photo .placeholder{min-height:170px}
+
+  /* ------- entries ------- */
+  .entry{margin-bottom:34px}
+  .entry:last-child{margin-bottom:0}
+  .entry h3{font-size:18px;font-weight:600;margin-bottom:2px}
+  .entry .where{color:var(--muted);font-size:15.5px;margin-bottom:10px;font-style:italic}
+  .entry p{margin-bottom:10px}
+  .entry ul{margin:8px 0 0 20px}
+  .entry li{margin-bottom:8px}
+
+  mark{
+    background:none;
+    color:var(--ink);
+    font-weight:bold;
+    border-bottom:2px solid var(--accent);
+  }
+
+  /* ------- skills ------- */
+  .skills p{margin-bottom:12px}
+  .skills b{font-family:'Archivo',system-ui,sans-serif;font-weight:600;font-size:15.5px}
+
+  /* ------- footer ------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 64px}
+  footer p{margin-bottom:12px}
+  .sig{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:28px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="head-grid">
+      <div class="intro">
+        <p class="hello">Stephenville, TX → wherever the work is</p>
+        <h1>Hi, I'm Julian.</h1>
+        <p>I just wrapped up my Computer Science degree at Tarleton State University (May 2026), and I spend most of my time in two places: training machine-learning models, and figuring out how to break the systems that serve them — then fixing what I broke.</p>
+        <p>That second part became a bit of an obsession. My capstone team spent a semester attacking our own LLM deployment with every trick in the OWASP Top 10 and hardening it until nothing got through. I'm looking for full-time AI engineering or AI security work where I can keep doing exactly that.</p>
+        <p class="links">
+          <a href="mailto:laresjulian7@gmail.com">laresjulian7@gmail.com</a>
+          <a href="https://github.com/Julian-lares" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/julian-lares" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+
+      <!-- PHOTO SPOT #1: your portrait. Upload images/me.jpg -->
+      <figure class="photo portrait empty">
+        <img src="images/me.jpg" alt="Julian Lares-Ibarra" onerror="this.classList.add('missing');this.parentElement.classList.add('empty')" onload="this.parentElement.classList.remove('empty')">
+        <div class="placeholder">your photo here<br>(upload images/me.jpg)</div>
+        <figcaption>that's me</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <!-- ================= RESEARCH ================= -->
+  <section id="research">
+    <h2>Research</h2>
+    <div class="entry">
+      <h3>Multimodal hopelessness detection <span class="date">· Mar – Dec 2025</span></h3>
+      <p class="where">Machine Intelligence and Security Research Lab, Tarleton State</p>
+      <p>My research question was simple to state and hard to answer: can a model detect hopelessness better when it sees both the words <em>and</em> an image, instead of either one alone? Turns out yes, by a lot.</p>
+      <ul>
+        <li>Fusing CLIP text–image embeddings with logistic regression hit a <mark>94.77% F1-score</mark> — 15.6 points over the image-only MobileNetV2 baseline. I benchmarked it against BLIP and across Random Forest and XGBoost too.</li>
+        <li>There was no dataset for this, so I built one: <mark>3,882 text–image pairs</mark> extending the HopeEDI benchmark, with images from locally hosted Stable Diffusion, DALL-E 3, and hand-picked selection (80.62% inter-rater Kappa).</li>
+        <li>The work became a Springer book chapter (under peer review, expected 2026) and a poster at the RIED Research Symposium.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <h3>Purple Team Agentic Pipeline <span class="date">· Jan – May 2026</span></h3>
+      <p class="where">Cybersecurity capstone · team lead, 3 people</p>
+      <p>We built a RAG chatbot the way a company would have to: defense in depth, department data silos, compliance mapping — and then we attacked it ourselves, on a loop, until it stopped losing.</p>
+      <ul>
+        <li>Final result: a <mark>0% exploit rate</mark> across automated OWASP Top 10 LLM testing — prompt injection, PII leakage, document extraction, DAN jailbreaks, latent injection — behind dual-stage NVIDIA NeMo Guardrails.</li>
+        <li>The stack: Gemini API, Docker, OpenWebUI, and a hardened FastAPI gateway with ChromaDB attribute-based access control enforcing silos across 35 documents, 6 datasets, and 2 access tiers, aligned to NIST AI RMF and ISO 42001.</li>
+        <li>The red side ran itself: Garak, Giskard, and Promptfoo orchestrated through n8n, with Ollama generating adversarial prompts, feeding findings back into the hardening cycle. Arize Phoenix traced every request for incident-response audits.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>GesturePass <span class="date">· Feb – Apr 2026</span></h3>
+      <p class="where">Machine learning course project · face gesture lead</p>
+      <p>Two-factor access control where both factors are gestures: one from your face, one from your hand. I owned the face side.</p>
+      <ul>
+        <li>Six facial gestures (neutral, smile, left/right wink, mouth open, eyebrows raised) classified in real time from a webcam, using a MediaPipe FaceMesh pipeline and a 100-tree Random Forest.</li>
+        <li>The fun engineering problem: making it work no matter where you sit. I normalized 3D landmarks to the nose tip and scaled by inter-ocular distance, then killed prediction flicker with confidence thresholding.</li>
+        <li>A shared feature-extraction module guaranteed the training pipeline and the live demo computed features identically — no train/inference drift.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHOTOS ================= -->
+  <section id="photos">
+    <h2>Out in the world</h2>
+    <p style="margin-bottom:22px">Some of this work made it off my laptop and onto poster boards and projector screens.</p>
+
+    <div class="photo-row">
+      <!-- PHOTO SPOT #2: upload images/ried-poster.jpg -->
+      <figure class="photo empty">
+        <img src="images/ried-poster.jpg" alt="Presenting the multimodal dataset poster at the RIED Research Symposium" onerror="this.classList.add('missing');this.parentElement.classList.add('empty')" onload="this.parentElement.classList.remove('empty')">
+        <div class="placeholder">photo spot<br>(upload images/ried-poster.jpg)</div>
+        <figcaption>RIED Research Symposium · Feb 2026</figcaption>
+      </figure>
+
+      <!-- PHOTO SPOT #3: upload images/capstone-showcase.jpg -->
+      <figure class="photo empty">
+        <img src="images/capstone-showcase.jpg" alt="Demoing the purple-team pipeline at the Mayfield College of Engineering Student Showcase" onerror="this.classList.add('missing');this.parentElement.classList.add('empty')" onload="this.parentElement.classList.remove('empty')">
+        <div class="placeholder">photo spot<br>(upload images/capstone-showcase.jpg)</div>
+        <figcaption>Mayfield Engineering Showcase · Apr 2026</figcaption>
+      </figure>
+
+      <!-- PHOTO SPOT #4: upload images/computer-society.jpg -->
+      <figure class="photo empty">
+        <img src="images/computer-society.jpg" alt="Leading a game development workshop for the Tarleton Computer Society" onerror="this.classList.add('missing');this.parentElement.classList.add('empty')" onload="this.parentElement.classList.remove('empty')">
+        <div class="placeholder">photo spot<br>(upload images/computer-society.jpg)</div>
+        <figcaption>Computer Society workshop</figcaption>
+      </figure>
+
+      <!-- PHOTO SPOT #5: upload images/club-event.jpg -->
+      <figure class="photo empty">
+        <img src="images/club-event.jpg" alt="Tarleton Computer Society event" onerror="this.classList.add('missing');this.parentElement.classList.add('empty')" onload="this.parentElement.classList.remove('empty')">
+        <div class="placeholder">photo spot<br>(upload images/club-event.jpg)</div>
+        <figcaption>Tarleton Computer Society</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= LEADERSHIP ================= -->
+  <section id="leadership">
+    <h2>Leadership</h2>
+    <div class="entry">
+      <h3>Officer / Treasurer, Tarleton Computer Society <span class="date">· Aug 2025 – May 2026</span></h3>
+      <p>I ran game-development workshops in GDScript and Unreal Engine for CS students — teaching both the technical side and the design fundamentals — and handled the club's treasury, budgeting our events and resources. A lot of what I know about coordinating people, I learned mentoring here.</p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="skills">
+    <h2>What I work with</h2>
+    <p><b>AI / ML:</b> Python, PyTorch, Scikit-learn, XGBoost, CLIP, BLIP, MobileNetV2, MediaPipe, OpenCV, multimodal dataset design, data preprocessing, model evaluation, prompt engineering</p>
+    <p><b>LLM & RAG:</b> RAG pipeline architecture, Gemini API, Ollama, ChromaDB, FastAPI, OpenWebUI, n8n orchestration, NVIDIA NeMo Guardrails, Arize Phoenix</p>
+    <p><b>AI security:</b> LLM red teaming (Garak, Giskard, Promptfoo), OWASP Top 10 for LLMs, prompt injection defense, RAG extraction mitigation, AI DLP, defense-in-depth, RBAC/ABAC, NIST AI RMF, ISO 42001</p>
+    <p><b>Languages & tools:</b> Python, C, C++, Java, SQL, GDScript, Git/GitHub, Docker, Jupyter, Ubuntu Linux, Windows</p>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications">
+    <h2>Publications & presentations</h2>
+    <div class="entry">
+      <p>Lares-Ibarra, J., et al. <em>"Multimodal Dataset Investigation for Hopeless Speech Detection in English."</em> Springer book chapter, under peer review (expected 2026).</p>
+    </div>
+    <div class="entry">
+      <p>Poster: <em>"Multimodal Dataset Creation: Correlating Text and Image for Hopelessness Detection."</em> RIED Research Symposium, Tarleton State University, Feb 27, 2026.</p>
+    </div>
+    <div class="entry">
+      <p>Showcase: <em>"A Purple Team Agentic Pipeline for Secure and Compliant LLM Deployment."</em> Mayfield College of Engineering Student Showcase, Tarleton State University, Apr 29, 2026.</p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact">
+    <h2>Say hi</h2>
+    <p>If you're hiring for AI engineering or AI security, or you just want to talk about breaking LLMs responsibly, email is the fastest way to reach me: <a href="mailto:laresjulian7@gmail.com">laresjulian7@gmail.com</a>. You can also call or text at <a href="tel:+13256420565">325-642-0565</a>.</p>
+    <p class="sig">Julian Lares-Ibarra · Tarleton State University CS, class of 2026</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
